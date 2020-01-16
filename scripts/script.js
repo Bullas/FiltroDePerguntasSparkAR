@@ -26,6 +26,7 @@ var interval;
 var materials = [];
 var sorting = false;
 
+
 getMaterials();
 
 TouchGestures.onTap().subscribe(function (gesture) {
@@ -41,9 +42,14 @@ function start(){
 }
 
 
+
 function getMaterials(){
-	for(var i = 1; i < 10; i++){
-		materials.push(Materials.get('r0' + i));
+	var numeroDeRespostas = 14;
+	//Edite aqui para o numero de respostas do seu filtro
+	//Os materiais devem seguir o padrão de nomeclatura r1 r2 r3 r4 r5 r6 r7 r8 r9 r10 r11 r12 ...
+
+	for(var i = 1; i <= numeroDeRespostas; i++){
+		materials.push(Materials.get('r' + i));
 	}
 }
 
